@@ -1,0 +1,82 @@
+### User Registration
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "email": "test@example.com",
+  "password": "password123"
+}
+
+### User Login
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "password123"
+}
+
+### Get User Profile
+GET http://localhost:5000/api/auth/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MDUzNjQ2NywianRpIjoiOWQwNWRlOWUtNjAzNS00ZTM5LThkYjgtOWFhZDE3ODYxNzk0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY3YmU3ODJlMzY5NzFkZTIwNzdmNTQ0ZiIsIm5iZiI6MTc0MDUzNjQ2NywiZXhwIjoxNzQwNTM3MzY3fQ.knrp8FwDr0-r7Vi3wpX5SG2RgEbNjKSmuGChsdwe3uU
+### Create Coding Exercise
+POST http://localhost:5001/api/exercises/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MDUzNjQ2NywianRpIjoiOWQwNWRlOWUtNjAzNS00ZTM5LThkYjgtOWFhZDE3ODYxNzk0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY3YmU3ODJlMzY5NzFkZTIwNzdmNTQ0ZiIsIm5iZiI6MTc0MDUzNjQ2NywiZXhwIjoxNzQwNTM3MzY3fQ.knrp8FwDr0-r7Vi3wpX5SG2RgEbNjKSmuGChsdwe3uU
+{
+  "title": "Reverse a String",
+  "description": "Write a function that reverses a string. The input string is given as an array of characters.",
+  "difficulty": "easy",
+  "topic": "strings",
+  "test_cases": [
+    {
+      "input": "\"hello\"",
+      "expected_output": "\"olleh\"",
+      "is_hidden": false
+    },
+    {
+      "input": "\"world\"",
+      "expected_output": "\"dlrow\"",
+      "is_hidden": false
+    },
+    {
+      "input": "\"python\"",
+      "expected_output": "\"nohtyp\"",
+      "is_hidden": true
+    }
+  ],
+  "starter_code": {
+    "python": "def reverse_string(s):\n    # Your code here\n    pass"
+  },
+  "solution_code": {
+    "python": "def reverse_string(s):\n    return s[::-1]"
+  },
+  "hints": [
+    {
+      "level": 1,
+      "content": "Think about iterating through the string backwards."
+    },
+    {
+      "level": 2,
+      "content": "Python has built-in ways to reverse strings."
+    },
+    {
+      "level": 3,
+      "content": "Try using string slicing with a negative step (s[::-1])."
+    }
+  ]
+}
+
+### Get Course Recommendations
+GET http://localhost:5002/api/recommendations/courses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MDUzNjQ2NywianRpIjoiOWQwNWRlOWUtNjAzNS00ZTM5LThkYjgtOWFhZDE3ODYxNzk0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY3YmU3ODJlMzY5NzFkZTIwNzdmNTQ0ZiIsIm5iZiI6MTc0MDUzNjQ2NywiZXhwIjoxNzQwNTM3MzY3fQ.knrp8FwDr0-r7Vi3wpX5SG2RgEbNjKSmuGChsdwe3uU
+### Generate Learning Path
+POST http://localhost:5002/api/recommendations/learning-path
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MDUzNjQ2NywianRpIjoiOWQwNWRlOWUtNjAzNS00ZTM5LThkYjgtOWFhZDE3ODYxNzk0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY3YmU3ODJlMzY5NzFkZTIwNzdmNTQ0ZiIsIm5iZiI6MTc0MDUzNjQ2NywiZXhwIjoxNzQwNTM3MzY3fQ.knrp8FwDr0-r7Vi3wpX5SG2RgEbNjKSmuGChsdwe3uU
+
+{
+  "goal": "programming",
+  "timeframe": "medium"
+}

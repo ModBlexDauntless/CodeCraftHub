@@ -1,0 +1,8 @@
+# File: requirements.txt
+
+flask==2.0.1
+pymongo==4.3.3
+flask-pymongo==2.3.0
+flask-jwt-extended==4.3.1
+werkzeug==2.0.1
+python-dotenv==0.19.0
